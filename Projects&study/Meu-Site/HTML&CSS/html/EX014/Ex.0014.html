@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div#corpo{
+            margin: auto;
+            font-size: 20px;
+            font-family: Arial, Helvetica, sans-serif;
+            width: 250px;
+            height: 200px;
+            padding: 5px;
+            border-radius: 15px;
+            background-color: whitesmoke;
+            align-content: center;
+        }
+        body{
+            background-color: rgb(115, 133, 148);
+        }
+        h3#titu{
+            text-align: center;
+            margin-top: 10px;
+            margin-bottom: auto;
+        }
+    </style>
+</head>
+<body>
+    <div id="corpo">
+    <h3 id="titu">Qual pais Voce mora?</h3> 
+    <input placeholder="Digite your country" type="text" id="pais">
+    <input type="button" value="enviar" id="botao" onclick="clicar()">
+    <div id="res"></div>
+    <script>
+        var a = document.getElementById("pais")
+        var b = document.querySelector("input#botao")
+        var res = document.querySelector("div#res")
+        function clicar(){
+            res.innerHTML = `<p>Voce mora no(a) <strong> ${a.value} </strong></p>`
+            if(a.value=="BRASIL"){
+                res.innerHTML += `<p>Voce e brasileiro(a)!</p>`
+            }
+            else{
+                res.innerHTML += `<p>Voce e estrangeiro(a)!</p>`
+            }
+        }
+
+    </script>
+    </div>
+</body>
+</html>

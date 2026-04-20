@@ -1,5 +1,5 @@
-import { prisma } from "./lib/prisma.js"; // nao necessita declara variavel prisma, pois ela ja foi exportada no arquivo prisma.ts
 import express from "express";
+import { prisma } from "./lib/prisma.js";
 
 const stat = express();
 stat.use(express.json());// dizendo para o express entender o formato json no corpo da requisição
